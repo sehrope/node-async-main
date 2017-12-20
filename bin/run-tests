@@ -1,0 +1,40 @@
+#!/bin/bash
+set -e
+
+log () {
+  echo "$@" 1>&2    
+}
+
+print_error () {
+  echo "$@" 1>&2
+  exit 1
+}
+
+expect_success () {  
+  log "Running test (expecting success): $@"
+  if ! "$@"
+  then
+    print_error "Expected success but process exited with failure exit code"
+  fi
+  log "Test succeeded: $@"
+}
+
+expect_failure () {  
+  log "Running test (expecting failure): $@"
+  if "$@"
+  then
+    print_error "Expected failure but process exited with success exit code"
+  fi
+  log "Test succeeded: $@"
+}
+
+main () {
+  expect_success node test/success.js
+  expect_success node test/success-slow.js
+  expect_failure node test/failure.js
+  expect_failure node test/failure-slow.js
+
+  log "All tests completed successfully"
+}
+
+main "$@"

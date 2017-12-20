@@ -1,0 +1,29 @@
+{
+  "name": "async-main",
+  "version": "1.0.0",
+  "description": "Wrapper for invoking async main functions",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sehrope/node-async-main.git"
+  },
+  "keywords": [
+    "async",
+    "main",
+    "wrapper",
+    "promise"
+  ],
+  "author": "Sehrope Sarkuni <sehrope@jackdb.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sehrope/node-async-main/issues"
+  },
+  "homepage": "https://github.com/sehrope/node-async-main#readme",
+  "devDependencies": {
+    "@types/node": "^8.5.1",
+    "mocha": "^3",
+    "ts-mocha": "^1",
+    "typescript": "^2.6.2"
+  }
+}
