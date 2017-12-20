@@ -2,3 +2,5 @@ bin
 Makefile
 src
 test
+tsconfig.json
+.travis.yml
