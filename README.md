@@ -22,7 +22,7 @@ Combined with async/await, this makes it very easy to write simple async node sc
 # Usage
 With JavaScript:
 ```js
-const main = require('async-main').defaults;
+const main = require('async-main').default;
 main(async () => {
     // Do stuff
 })
